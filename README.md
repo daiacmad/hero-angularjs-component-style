@@ -1,0 +1,1 @@
+# hero-angularjs-component-style
