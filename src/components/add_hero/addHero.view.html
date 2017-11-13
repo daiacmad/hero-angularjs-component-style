@@ -1,0 +1,38 @@
+<form name="formAddHero">
+    <fieldset ng-disabled="$ctrl.loading.add">
+        <select name="corp" class="form-control form-group" 
+            ng-model="$ctrl.hero.corp" 
+            ng-required="true">
+            <option value="{{corp.id}}" ng-repeat="corp in $ctrl.corporations track by corp.id">{{corp.name}}</option>
+        </select>
+        <p class="text-danger" ng-show="formAddHero.corps.$invalid && formAddHero.corps.$dirty">
+            this field is required
+        </p>
+
+        <input type="text" name="name" placeholder="name" class="form-control form-group" 
+            ng-model="$ctrl.hero.name"
+            ng-required="true">
+        <p class="text-danger" ng-show="formAddHero.name.$invalid && formAddHero.name.$dirty">
+            this field is required
+        </p>
+
+        <textarea type="text" rows="5" name="description" placeholder="description" class="form-control form-group" 
+            ng-model="$ctrl.hero.description"
+            ng-required="true">    
+        </textarea>
+        <p class="text-danger" ng-show="formAddHero.description.$invalid && formAddHero.description.$dirty">
+            this field is required
+        </p>
+
+        <input type="number" name="age" placeholder="age" class="form-control form-group" 
+            ng-model="$ctrl.hero.age"
+            ng-required="true">
+        <p class="text-danger" ng-show="formAddHero.age.$invalid && formAddHero.age.$dirty">
+            this field is required
+        </p>
+        
+        <button type="submit" class="btn btn-primary btn-lg"
+            ng-click="$ctrl.addHeroModel()"
+            ng-disabled="formAddHero.$invalid || $ctrl.loading.add">Add Hero</button>
+    </fieldset>
+</form>

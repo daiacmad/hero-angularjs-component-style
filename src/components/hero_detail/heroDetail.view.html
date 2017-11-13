@@ -1,0 +1,36 @@
+<h1> {{$ctrl.dataHeroDetail.hero.name}} </h1>
+<a ui-sref=".update" ng-click="$ctrl.modifyUpdateHeroDetail()" class="btn btn-primary">Update</a>
+<a ui-sref=".delete" class="btn btn-danger">Delete</a>
+<table class="table">
+	<thead class="thead-inverse">
+		<tr>
+			<td>id</td>
+			<td>Age</td>
+			<td>Power</td>
+			<td>Corp</td>
+			<td>Description</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td style="width:1%">{{$ctrl.dataHeroDetail.hero.id}}</td>
+			<td>{{$ctrl.dataHeroDetail.hero.age}}</td>
+			<td>
+				<div ng-repeat="item in $ctrl.dataHeroDetail.power track by item.id">
+					{{item.name}}
+				</div>
+			</td>
+			<td style="width:15%">
+				<div ng-repeat="item in $ctrl.dataHeroDetail.corp track by item.id_corp">
+					{{item.name_corp}}
+				</div>
+			</td>
+			<td>{{$ctrl.dataHeroDetail.hero.description}}</td>
+		</tr>
+	</tbody>
+</table>
+<div  >asdsadasd</div>
+	<div class="slick-slider" >
+		<div emit-last-repeater-element ng-repeat="item in $ctrl.slides" style="height:350px;background:red" ></div>
+	</div>
+<ui-view update-hero="$ctrl.hero"></ui-view>

@@ -1,0 +1,22 @@
+<fieldset ng-disabled="$ctrl.loading.update">
+	<form>
+		<div class="row">
+			<div class="col-sm-6 col-xs-12">
+				<input class="form-group form-control" type="text" name="name" placeholder="Name" ng-model="$ctrl.updateHero.hero.name" />
+			</div>
+			<div class="col-sm-6 col-xs-12">
+				<input  class="form-group form-control" type="text" name="age" placeholder="Age" ng-model="$ctrl.updateHero.hero.age" />
+			</div>
+		</div>
+		<select  class="form-group form-control" name="corp" ng-model="$ctrl.updateHero.hero.id_corp"></select>
+		<div class="form-group">
+			<ul>
+				<li></li>
+			</ul>
+		</div>
+		<textarea  class="form-group form-control" ng-model="$ctrl.updateHero.hero.description" placeholder="Description" rows="6"></textarea>
+		<div class="form-group">
+			<button type="submit" class="btn btn-primary" ng-click="$ctrl.updateHeroModel()">Update </button>
+		</div>
+	</form>
+</fieldset>

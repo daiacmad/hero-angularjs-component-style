@@ -1,0 +1,11 @@
+<fieldset ng-disabled="$ctrl.loading.update">
+	<form>
+	    <select name="corps" class="form-control form-group" ng-model="$ctrl.hero.id_corp" convert-to-number>
+	    	<option value="{{corp.id}}" ng-repeat="corp in $ctrl.corporations track by corp.id">{{corp.name}}</option>
+	    </select>
+	    <input type="text" name="name" placeholder="name" class="form-control form-group" ng-model="$ctrl.hero.name">
+	    <textarea type="text" rows="5" name="description" placeholder="description" class="form-control form-group" ng-model="$ctrl.hero.description"></textarea>
+	    <input type="number" name="age" placeholder="age" class="form-control form-group" ng-model="$ctrl.hero.age">
+	    <button type="submit" class="btn btn-primary btn-lg" ng-click="$ctrl.updateHeroModel()">Update Hero</button>
+	</form>
+</fieldset>

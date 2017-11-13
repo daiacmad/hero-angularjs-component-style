@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Angular tutorials</title>
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="vendor/slick/slick.css">
+    <link rel="stylesheet" href="vendor/slick/slick-theme.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<body ng-app="angular-app">
+	<div class="container" ng-controller="testForm as ctrl">
+	    <a ui-sref="heroes" >Heroes</a>
+	    <a ui-sref="corporations" >Corporation</a>
+        <form action="#" method="POST" name="formTest">
+            
+            <div ng-repeat="input in ctrl.model.names">
+                <ng-form name="formTestField">
+                    <input type="text" ng-model="input.name" ng-required="true" name="name">
+                    <span ng-show="formTestField.name.$invalid">asdasdasd</span>
+                </ng-form>
+            </div>
+            <button type="button" ng-click="ctrl.addInput()">Add input</button>
+            <span ng-show="formTest.$valid">gasasasda</span>
+        </form>
+	    <!-- <ui-view></ui-view> -->
+	</div>
+</body>
+
+<script src="vendor/jquery/dist/jquery.min.js"></script>
+<script src="vendor/angular/angular.min.js"></script>
+<script src="vendor/angular/angular-ui-router.min.js"></script>
+<script src="vendor/underscore/underscore.js"></script>
+<script src="vendor/slick/slick.min.js"></script>
+<script src="src/app.js"></script>
+<script src="src/style.js"></script>
+<script src="src/services/services.js"></script>
+<script src="src/directives/update_hero/updateHero.controller.js"></script>
+<script src="src/directives/afterRepeat.js"></script>
+<!-- hero Container -->
+<script src="src/components/hero_container/heroContainer.component.js"></script>
+<script src="src/components/hero_container/heroContainer.controller.js"></script>
+<!-- heroes list-->
+<script src="src/components/heroes/heroes.component.js"></script>
+<script src="src/components/heroes/heroes.controller.js"></script>
+<!-- hero -->
+<script src="src/components/hero/hero.component.js"></script>
+<script src="src/components/hero/hero.controller.js"></script>
+<!-- add hero -->
+<script src="src/components/add_hero/addHero.component.js"></script>
+<script src="src/components/add_hero/addHero.controller.js"></script>
+<!-- update hero -->
+<script src="src/components/update_hero/updateHero.component.js"></script>
+<script src="src/components/update_hero/updateHero.controller.js"></script>
+<!-- hero detail -->
+<script src="src/components/hero_detail/heroDetail.component.js"></script>
+<script src="src/components/hero_detail/heroDetail.controller.js"></script>
+<!-- update hero detail -->
+<script src="src/components/update_hero_detail/updateHeroDetail.component.js"></script>
+<script src="src/components/update_hero_detail/updateHeroDetail.controller.js"></script>
+<!-- test form -->
+<script src="src/testForm.js"></script>
+
+</body>
+</html>

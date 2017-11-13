@@ -1,0 +1,26 @@
+<table class="table" >
+	<thead class="thead-inverse">
+		<tr>
+			<th>Id</th>
+			<th>Name</th>
+			<th>Description</th>
+			<th>Age</th>
+			<th>Corporation</th>
+			<th>Update</th>
+			<th>Delete</th>
+			<th>View</th>
+		</tr>
+	</thead>
+    <tbody>
+		<tr ng-repeat="hero in $ctrl.heroes">
+			<td>{{hero.id}}</td>
+			<td style="width:150px">{{hero.name}}</td>
+			<td>{{hero.description}}</td>
+			<td>{{hero.age}}</td>
+			<td style="width:150px">{{hero.corp_name}}</td>
+			<td><button class="btn btn-primary" ng-click="$ctrl.updateHero(hero)">Update</button></td>
+			<td><button class="btn btn-danger" ng-click="$ctrl.deleteHero(hero)">delete</button></td>
+			<td><a ui-sref="heroDetail({id : hero.id})">view</a></td>
+		</tr>
+	</tbody>
+</table>

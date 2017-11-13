@@ -1,0 +1,21 @@
+<fieldset ng-disabled="$ctrl.loading.delete">
+    <heroes     
+        heroes="$ctrl.heroes"
+        on-delete-hero="$ctrl.deleteHeroModel($event)" 
+        on-modify-update-hero="$ctrl.modifyUpdateHero($event)"></heroes>
+</fieldset>
+<div class="row">
+	<div class="col-md-6 col-xs-12">
+	    <add-hero 
+            loading = "$ctrl.loading"
+	    	corporations="$ctrl.corporations"
+            on-add-hero = "$ctrl.addHeroModel($event)"></add-hero>
+	</div>
+	<div class="col-md-6 col-xs-12">
+		<update-hero 
+			loading="$ctrl.loading"
+			corporations="$ctrl.corporations" 
+			hero="$ctrl.dataModifyUpdateHero"
+            on-update-hero="$ctrl.updateHeroModel($event)"></update-hero>
+	</div>
+</div>

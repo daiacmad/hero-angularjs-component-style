@@ -1,0 +1,20 @@
+{
+  "name": "ngTutorial",
+  "version": "1.0.0",
+  "description": "Angular Tutorials",
+  "main": "index.js",
+  "author": "Apps Cyclone",
+  "license": "ISC",
+  "dependencies": {
+    "bower": "^1.7.9",
+    "http-server": "^0.10.0"
+  },
+  "scripts": {
+    "postinstall": "bower install",
+    "prestart": "npm install",
+    "start": "http-server -a 0.0.0.0 -p 8080",
+    "preupdate-webdriver": "npm install",
+    "update-webdriver": "webdriver-manager update"
+  },
+  "devDependencies": {}
+}
